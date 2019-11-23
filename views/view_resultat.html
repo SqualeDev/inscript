@@ -1,0 +1,366 @@
+<div container>
+    <!-- <div class="row">
+        <h2>
+            <div style="color: #5e9bb7;">Me GRIPPON CLARISSE - 918516M</div>
+            <small>NOTRE DAME DE GRAVENCHON (0976130)</small>
+        </h2>
+    </div> -->
+    <br>
+    <!-- Filtrage -->
+    <form>
+        <fieldset>
+            <legend class="h4 text-center mb-8">Sélectionner ce qui sera visible :</legend>
+            <div class="row justify-content-center">
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input csg-input" id="Annee2019" value="2019" name="annee">
+                    <label class="custom-control-label" for="Annee2019">2019</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input csg-input" id="Annee2018" value="2018" name="annee">
+                    <label class="custom-control-label" for="Annee2018">2018</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input csg-input" id="Annee2017" value="2017" name="annee">
+                    <label class="custom-control-label" for="Annee2017">2017</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input csg-input" id="Annee2016" value="2016" name="annee">
+                    <label class="custom-control-label" for="Annee2016">2016</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input csg-input" id="Annee2015" value="2015" name="annee">
+                    <label class="custom-control-label" for="Annee2015">2015</label>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input csg-input" id="DisciplineFita" value="FITA" name="discipline">
+                    <label class="custom-control-label" for="DisciplineFita">Fita</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input csg-input" id="DisciplineFederal" value="FEDERAL" name="discipline">
+                    <label class="custom-control-label" for="DisciplineFederal">Féréral</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input csg-input" id="DisciplineSalle" value="SALLE" name="discipline">
+                    <label class="custom-control-label" for="DisciplineSalle">2 x 18m salle</label>
+                </div> -->
+                <?php
+                    if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/licencies')) {
+                        // Config finale
+                        // require_once $_SERVER['DOCUMENT_ROOT'] . '/licencies/config_local.php';
+                        require_once $_SERVER['DOCUMENT_ROOT'] . '/licencies/constantes.php';
+                    } else {
+                        // Config Debug
+                        // require_once $_SERVER['DOCUMENT_ROOT'] . '/config_local.php';
+                        require_once $_SERVER['DOCUMENT_ROOT'] . '/constantes.php';
+                    }
+                    // require_once $_SERVER['DOCUMENT_ROOT'] . '/licencies/constantes.php';
+                    require_once PATH_MODELS . 'model_class_resultat.php';
+                    $objDistance  = new classResultat();
+                    echo $objDistance->formaterHtmlDistances();
+                ?>
+            </div>
+        </fieldset>
+    </form>
+    <br>
+    <div class="alert alert-danger" role="alert" id="msgAlert">Pas de données pour les disciplines sélectionnées durant les années sélectionnées !</div>
+    <!--Grid column-->
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <canvas id="lineChart"></canvas>
+        </div>
+    </div>
+    <!--Grid column-->
+    <br>
+    <div class="row">
+        <div class="col">
+            <div style="color: black" id="score"></div>        
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="modalComment" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h4 class="title" id="modalCommentDate"></h4>
+            </div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCommentLieu"></h5>
+            </div>
+            <form id="modalCommentForm" name="depart" role="form">
+                <div class="modal-body" id="modalComment">
+                    <div class="md-form">
+                        <textarea type="text" id="modalCommentInput" class="md-textarea form-control" rows="10"></textarea>
+                        <!-- <label id="modalCommentLabel" >Votre commentaire ...</label> -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" id="modalSubmit">Valider</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                </div>
+                <div class="modal-footer" style="display: none;">
+                    <label for="modalID">ID</label>
+                    <input type="text" class="form-control" name="modalID" id="modalID">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready( function() {
+        $('.csg-input').change( function(){
+            // Récupérer les checkbox activées ex : (2018, 2016, Fita, Salle)
+            // Envoyer par ajax à un script PHP les données (voir jquery ajax post data array)
+            // Dans le script PHP concatener les résultats en fonction des choix demandés
+            // Commencer par l'entete commune 'resultat_entete.html'
+            // Ajouter Fita-2018, puis Fita-2016, puis Salle-2018, puis Salle-2016
+            // Récupérer cette concatenation et l'afficher dans le div conrrespondant id="score"
+
+            var annee = [];
+            $('input:checked[name=annee]').each( function() {
+                annee.push($(this).val());
+            })
+
+            // var discipline = [];
+            // $('input:checked[name=discipline]').each( function() {
+            //     discipline.push($(this).val());
+            // })
+            var strDisciplineBrute = $('input[type=radio][name=DistanceRadios]:checked').val();
+            // console.log("INPUT : " . strDisciplineBrute);
+            // document.querySelector("#radio_Extérieur\\ -\\ 30m")
+            var arrDisciplineBrute = strDisciplineBrute.split(' - ');
+
+            var strDiscipline = arrDisciplineBrute[0];
+
+            var strDistance = arrDisciplineBrute[1];
+            
+            // Récupérer le login du licencié
+            var strLicencie = '<?php echo $_SESSION["licencie"]; ?>';
+
+            // alert("strLicencie : " + strLicencie)
+
+            var data = {};
+            data['licencie'] = strLicencie;
+            data['annee'] = annee;
+            data['discipline'] = strDiscipline;
+            data['distance'] = strDistance;
+
+            data = JSON.stringify(data);
+
+            ajaxResultat(data);
+        });
+        $("#modalCommentForm").submit(function(event){
+            var ResultatID = $("#modalID").val();
+            var ResultatComment = $("#modalCommentInput").val();
+            submitForm(ResultatID, ResultatComment);
+            return false;
+        });
+    });
+
+    $(document).on('click', '.modifieComment', function () {
+        var tr = $(this).parent('td').parent('tr');
+        var index = $(tr).index();
+        var key =  $(tr).find('td').eq(0).html();
+        var [resultat_Date, resultat_Nom, resultat_Licencie, resultat_Points] = key.split('_');
+        
+        // Récupérer le commentaires de ce resultat
+        $.ajax({
+            url         : '../views/ajax_comment.php',
+            type        : 'GET',
+            data        : 'cmd=afficher' + '&resultatDate=' + resultat_Date + '&resultatNom=' + resultat_Nom + '&resultatLicencie=' + resultat_Licencie + '&resultatPoints=' + resultat_Points,
+            dataType    : 'html',
+            success     : function(code_html, statut) {
+                // Remplir le modal avec les données
+                $("#modalID").val(key);
+                $("#modalCommentDate").html("Résultat du " + resultat_Date);
+                $("#modalCommentLieu").html(resultat_Nom + ' (' + resultat_Points + ' pts)');
+                $("#modalCommentInput").val(code_html.replace(/<br\s?\/?>/g,"\n"));
+                
+                // Afficher le modal
+                $("#modalComment").modal('show'); 
+            },
+            error       : function(resultat, statut, erreur) {
+
+            },
+            complete    : function(resultat, statut) {
+
+            }
+        });
+    });
+
+    function submitForm(resultID, resultat_Comment){
+        // Sauvegarder le commentaire du résultat
+        var [resultat_Date, resultat_Nom, resultat_Licencie, resultat_Points] = resultID.split('_');
+        // Nettoyage du commentaires
+        resultat_Comment = resultat_Comment.replace(/\r\n|\r|\n/g,"<br/>");
+
+        $.ajax({
+            url         : '../views/ajax_comment.php',
+            type        : 'GET',
+            data        : 'cmd=sauvegarder' + '&resultatDate=' + resultat_Date + '&resultatNom=' + resultat_Nom + '&resultatLicencie=' + resultat_Licencie + '&resultatPoints=' + resultat_Points + '&resultatComment=' + resultat_Comment,
+            dataType    : 'html',
+            success     : function(code_html, statut) {
+                // Afficher l'état de la sauvegarde'
+                var strTitre = "Article Sauvegardé !";
+                var strType = "success";
+                var strBouton = "Génial !";
+                var strMessage = "Le commentaire a bien été sauvegardé.";
+                
+                swal({
+                    title: strTitre,
+                    type: strType,
+                    html: strMessage,
+                    confirmButtonText: strBouton,
+                    confirmButtonColor: '#28A744',
+                    closeOnConfirm: false
+                }).then(function(isConfirm){
+                    // FIXME Récupérer les paramètres d'affichage des résultats pour le rafraichissement
+                    window.location.href='index.php?controller=resultat&action=Afficher';
+                });
+            },
+            error       : function(resultat, statut, erreur) {
+                var strTitre = "Article non sauvegardé !";
+                var strType = "error";
+                var strBouton = "Désolé...";
+                var strMessage = "Le commentaire n'a pas pu être sauvegardé !";
+                
+                swal({
+                    title: strTitre,
+                    type: strType,
+                    html: strMessage,
+                    confirmButtonText: strBouton,
+                    confirmButtonColor: '#dc3545',
+                    closeOnConfirm: false
+                }).then(function(isConfirm){
+                    // FIXME Récupérer les paramètres d'affichage des résultats pour le rafraichissement
+                    window.location.href='index.php?controller=resultat&action=Afficher';
+                });
+            },
+            complete    : function(resultat, statut) {
+
+            }
+        });
+    }
+
+    function ajaxResultat(data) {
+        $.ajax({
+            url         : '../views/ajax_resultat.php',
+            type        : 'post',
+            data        : {myJSON: data},
+            dataType    : 'json',
+            success     : function(response, statut) {
+                if (response[0].resultat.length != 0) {
+                    $('#msgAlert').hide();
+                    $('#score').html(response[0].table);
+                    afficheSuiviScores(response[0].resultat);
+                } else {
+                    $('#msgAlert').show();
+                    $('#score').html("");
+                    masquerSuiviScores();
+                }
+            },
+            error       : function(resultat, statut, erreur) {
+                
+            },
+            complete    : function(resultat, statut) {
+
+            }
+        });
+    }
+    
+    function masquerSuiviScores() {
+        $('#lineChart').hide();
+    }
+
+    var myLineChart;
+
+    function afficheSuiviScores(jsonResultats) {
+        // https://mdbootstrap.com/javascript/charts/
+
+        var arrRESULTAT = JSON.parse(JSON.stringify(jsonResultats));
+
+        var arrData = [];
+
+        var arrLabel = [];
+
+        var arrComment = [];
+
+        var strDiscipline = '';
+
+        for (var discipline in arrRESULTAT) {
+            strDiscipline = discipline;
+            for (var annee in arrRESULTAT[discipline]) {
+                var index = 1;
+                for (var resultat in arrRESULTAT[discipline][annee]) {
+                    arrData.push(arrRESULTAT[discipline][annee][resultat]['points']);
+                    arrLabel.push(arrRESULTAT[discipline][annee][resultat]['date']);
+                    arrComment.push(annee + '-' + index);
+                    index++;
+                }
+            }
+        }
+
+        // Traitement du graphique 
+        $('#lineChart').show();
+        var ctxL = document.getElementById("lineChart").getContext('2d');
+        
+        if(typeof myLineChart !== "undefined") {
+			myLineChart.destroy();
+		}
+        
+        myLineChart = new Chart(ctxL, {
+            type: 'line',
+            data: {
+                labels: arrLabel,
+                datasets: [
+                    {
+                        label: strDiscipline,
+                        backgroundColor : "rgba(255,255,51,0.5)",
+                        borderWidth : 2,
+                        borderColor : "",
+                        pointBackgroundColor : "",
+                        pointBorderColor : "",
+                        pointBorderWidth : 1,
+                        pointRadius : 4,
+                        pointHoverBackgroundColor : "rgba(255,255,51,0.5)",
+                        pointHoverBorderColor : "",
+                        data: arrData,
+                        comment: arrComment
+                    }
+                ]
+            },
+            options: {
+                legend: {
+                    labels: {
+                        // This more specific font property overrides the global property
+                        fontColor: 'black'
+                    }
+                },
+                tooltips: {
+                    position: 'nearest',
+                    mode: 'index',
+                    intersect: false,
+                    footerFontStyle: 'normal'
+                },
+                scales: {
+                    xAxes: [{
+                        display: false,
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Points'
+                        }
+                    }]
+                }
+            }
+        });
+    }
+</script>

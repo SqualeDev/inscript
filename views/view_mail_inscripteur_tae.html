@@ -1,0 +1,42 @@
+<html>
+    <head></head>
+    <body>
+        <div id='contenu' style='padding: 20px 20px 20px 20px;'>
+            Bonjour,<br>
+            Une nouvelle demande d'inscription automatique pour le concours %%strDiscipline%% de %%strLieu%% se déroulant %%strDuree%% a été envoyé le %%dateNow%%.
+        </div>
+        <br>
+        <div id='listing' style='padding: 0px 20px 0px 20px;'>
+            <div id='entete' style='padding: 0px 10px 50px 10px;'>
+                Voici la liste des participants et leurs départs demandés.
+            </div>
+            <table id='tableauInscrit' style='padding: 20px 10px 0px 10px;'>
+                <caption style='text-align:center; font-size: x-large;' >Liste des participants</caption>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>n° Licence</th>
+                    <th>Catégorie</th>
+                    <th>Discipline</th>
+                    <th>Départ</th>
+                    <th>Distance/Blason</th>
+                </tr>
+                <tr>
+                    %%arrTableau%%
+                </tr>
+            </table>
+        </div>
+        <div id='question' style='padding: 30px 20px 10px 20px;'>
+            Vous recevrez normalement prochainement la confirmation de la part du club de %%strOrganisateur%% de l'inscription des personnes listées.<br>
+            Suite à cette validation, pouvez-vous envoyer le chèque d'un montant de <b>%%intMontant%% €</b> par courrier postal pour confirmer cette inscription à l'adresse suivante :<br>
+            %%strAdresse%%
+        </div>
+        <div id='remerciements' style='padding: 10px 20px;'>
+            Merci d'avance pour votre travail.<br>
+            Cordialement<br>
+        </div>
+        <div id='signature' style='text-align: right; padding: 30px 20px;'>
+            Le robot d'inscription.
+        </div>
+    </body>
+</html>

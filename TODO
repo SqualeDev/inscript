@@ -1,0 +1,442 @@
+
+New:
+  Accueil :
+    ☐ Contacter les fonctions (Président, Secrétaire, Trésorier, Inscription) via le formulaire du site
+    ☐ Sauvegarder les connexions des licenciés
+  Inscriptions :
+    ☐ Affichage des informations (archer, concours, départ) sur un tableau pour extraire le mandat du concours sur PDF ou Excel
+    ☐ Voir possibilité de mettre des filtres par colonnes
+    ☐ Filtre sur date pour voir quel concours ce jour
+    ☐ Ajout d'une sélection multiple des types de concours (Tir Salle, Beursault, ...) pour n'afficher que les concours choisis
+    ☐ Ajouter une page Equipes
+    ☐ Ajouter un message lorsque la liste des concours à afficher est vide
+  Entrainements :
+    ☐ Calculer le nombre de flèches par semaine, par mois
+    ☐ Afficher un graphique du nombres de flèches
+    ☐ Permettre à l'entraineur d'accéder à cette page pour y laisser des commentaires
+  Résultats:
+    ☐ Afficher en choisissant l'année/la zone (extérieur, salle)/la distance/l'arme
+  Aides :
+    ☐ Aide pour connexion au site
+    ☐ Aide pour s'inscrire à un concours
+    ☐ Aide pour afficher ses résultats
+    ☐ Aide pour mise à jour de ses résultats
+    ☐ Aide pour expliquer le processus d'inscription
+    ☐ Aide pour expliquer les données du profil
+
+Fixme:
+  ☐ // FIXME Traiter le cas d'un 2nd départ sur le même concours. Pas de HREF sur le score le plus faible @file:///c%3A/wamp64/www/inscript/check_resultat_db.php#211
+  ☐ // FIXME Récupérer les paramètres d'affichage des résultats pour le rafraichissement @file:///c%3A/wamp64/www/inscript/views/view_resultat.html#202 @file:///c%3A/wamp64/www/inscript/views/view_resultat_coach.html#216
+  ☐ // FIXME Récupérer les paramètres d'affichage des résultats pour le rafraichissement @file:///c%3A/wamp64/www/inscript/views/view_resultat.html#220 @file:///c%3A/wamp64/www/inscript/views/view_resultat_coach.html#234
+  ☐ // FIXME Problème sur l'encodage des commentaires des résultats (voir https://www.web2generators.com/html-based-tools/online-html-entities-encoder-and-decoder)
+
+Archive:
+  v3.2.2
+    ✔ Correction d'un bug sur les noms des fichiers view_entrainements*.php @done(19-10-21 18:26)
+  v3.2.1
+    ✔ Correction de l'affichage d'un concours validé @done(19-10-20 12:42)
+  v3.2.0
+    ✔ Connexion obligatoire à l'arrivée sur le site @done(19-10-20 09:36)
+  v3.1.3
+    ✔ Correction la remise à zéro du compteur des championnats @done(19-10-06 10:14)
+  v3.1.2
+    ✔ Correction la remise à zéro du compteur de concours @done(19-10-05 15:18)
+  v3.1.1
+    ✔ Correction la remise à zéro du compteur de concours @done(19-10-05 15:18)
+    ✔ Correction de l'affichage dans le modal inscription @done(19-10-05 15:34)
+  v3.1.0
+    ✔ Créer un espace pour sauvegarder les entrainements @done(19-09-29 09:11) @project(New.Entrainements )
+    ✔ Sauvegarder le bilan de chaque entrainement (points techniques à surveiller, travail effectué, résultat d'un tir compté...) @done(19-09-29 09:11) @project(New.Entrainements )
+    ✔ Sauvegarder le nombres de flèches par types pour chaque entrainement @done(19-09-29 09:11) @project(New.Entrainements )
+    ✔ Permettre à l'entraineur d'y laisser des consignes pour les futurs entrainements @done(19-09-29 09:11) @project(New.Entrainements )
+  v3.0.0
+    ✘ Affichage des articles de la page d'accueil avec un fondu @cancelled(19-08-27 15:48) @project(New.Accueil )
+    ✔ Supprimer ce qui concerne les "Infos du Club" @started(19-08-27 15:49) @done(19-09-03 06:42) @lasted(6d14h53m22s) @project(New.Accueil )
+    ✔ Supprimer les articles @started(19-08-27 15:48) @done(19-09-03 06:42) @lasted(6d14h54m26s) @project(New.Accueil )
+    ✔ Supprimer les menus latéraux "Dates" et "Catégories" @started(19-08-27 15:48) @done(19-09-03 06:42) @lasted(6d14h54m27s) @project(New.Accueil )
+    ✔ Supprimer "Mes Commandes" dans le menu "Espace Licenciés" et les pages qui était appelées @started(19-08-27 15:48) @done(19-09-03 06:42) @lasted(6d14h54m28s) @project(New.Accueil )
+    ✘ Pouvoir mettre une vidéo en pièce jointe d'un article @cancelled(19-08-27 15:48) @project(New.Articles )
+    ✘ Afficher le badge "New" lorsqu'au moins 1 article à moins de 15 jours @file:///c%3A/wamp64/www/inscript/control_class_home.php#105 @file:///c%3A/wamp64/www/inscript/control_class_home.php#122 @cancelled(19-08-27 15:48) @project(New.Articles )
+    ✘ N'afficher que quelques articles sur le formulaire gestion des articles et laissé un bouton "Plus..." pour le reste @cancelled(19-08-27 15:48) @project(New.Articles )
+    ✔ Supprimer ce qui concerne les articles @started(19-08-27 15:48) @done(19-09-03 06:42) @lasted(6d14h54m34s) @project(New.Articles )
+  v2.0.9
+    ✔ // FIXME Modification emplacements racine suite à déplacement du site @done(19-08-22 09:11)
+  v2.0.8
+    ✔ // FIXME Affichage des différentes diciplines @done(19-08-13 10:22) @project(Fixme)
+  v2.0.7
+    ✔ Filtrer les résultats par type de concours/distance @done(19-08-12 16:08) @project(New.Résultats)
+  v2.0.6
+    ✔ Ajout de logs au mail trésorier
+    ✔ Ajout du nombre de concours effectué dans l'année sur le bandeau d'accueil.
+    ✔ Modification des tarifs des licences pour l'année 2019-2020
+  v2.0.5
+    ✔ // FIXME Correction de la variable adresse mail du participant au concours
+  v2.0.4
+    ✔ // FIXME Mise en place d'un traçage des erreurs d'envoi de mails
+    ✔ Désactivation de l'article épinglé
+  v2.0.3
+    ✔ Ajout d'un mode debug pour les envois de mails
+  v2.0.2
+    ✔ Corriger le processus automatique de vérification des concours (Envoi des mails aux club organisateur, aux participants, aux trésorier, etc...) @done(19-04-14 10:23)
+    ✔ Avoir un courrier spécifique par type de concours (Salle, TAE, ...) @done(19-04-13 14:47) @project(New.Inscriptions )
+    ✔ // FIXME Afficher le type d'epreuve sur les départs du formulaire de gestion des inscriptions @file:///c%3A/wamp64/www/inscript/views/ajax_form_concours.php#257 @done(19-04-12 14:51) @project(Fixme)
+  v2.0.1
+    ✔ Avoir plusieurs formulaires en fonction des types de concours (Salle, TAE, ...) @done(19-04-08 12:45) @project(New.Inscriptions )
+    ✔ Ajouter la possibilité de choisir entre Coupe et Championnat pour le TAE @done(19-04-08 12:45) @project(New.Inscriptions )
+  v2.0.0
+    ✔ FIXME Désactivation de l'inscription automatique suite à évolution pour TAE @done(19-04-07 09:43)
+  v1.9.9
+    ✔ FIXME Correction des chemins des documents de l'Assemblée Générale @done(18-12-18 18:12)
+    ✔ FIXME Correction du téléchargement des mandats sur Firefox @done(18-12-18 18:12)
+    ✔ FIXME Suppression d'un problème de sécurité sur Firefox @done(18-12-18 18:16)
+  v1.9.8
+    ✔ Ajout du CR de la réunion du 7 déc 2018 @done(18-12-14 08:29)
+    ✔ Ajout de lien pour les feuilles de marques @done(18-12-14 10:05)
+    ✔ Ajout de la possibilité de mettre un article "épinglé" sur la page d'accueil @done(18-12-14 11:16)
+  v1.9.7
+    ✔ Ajout des dates de commande, paiement et livraison pour les vêtements @done(18-12-14 07:10)
+    ✔ Ajout page pour les Comptes Rendu des Assemblées Générales @done(18-12-14 06:46)
+    ✔ // FIXME Problème sur l'affichage de l'article lorsqu'il n'a pas d'image associée @done(18-12-12 13:57)
+    ✔ // FIXME Ajout du répertoire des logs en suivi git @done(18-12-12 14:34)
+    ✔ // FIXME Problème d'upload de mandat @done(18-12-03 07:29) @project(Fixme)
+  v1.9.6
+    ✔ Mettre dans le formulaire de gestion du concours la possibilité d'uploader le mandat via une page externe @done(18-11-29 14:26) @project(New.Inscriptions )
+    ✔ Modification du tri des informations dans le mail "Récapitulatif des départs à valider" @done(18-11-27 16:51)
+  v1.9.5
+    ✔ // FIXME Affichage du badge New uniquement pour les articles du mois courant @done(18-11-26 14:24)
+    ✔ Dans le tableau des concours laisser visible la semaine précédente la date d'aujourd'hui @done(18-11-26 11:54) @project(New.Inscriptions )
+  v1.9.4
+    ✔ // FIXME Correction bug sur le traitement des catégorie d'age @done(18-11-09 17:33)
+  v1.9.3
+    ✔ Limiter l'affichage du nombre d'articles à 6 sur la page d'accueil @done(18-11-06 19:32) @project(New.Articles )
+    ✔ // FIXME Correction de la sauvegarde du nom de la photo d'un article @done(18-11-06 14:58)
+    ✔ Envoyer le mail au trésorier que pour les concours clos du WE @done(18-11-06 07:08) @project(New.Inscriptions )
+  v1.9.2
+    ✔ // FIXME Correction d'un bug lors du vidage du panier pour une 1ère commande @done(18-11-03 10:34)
+  v1.9.1
+    ✔ Mise à jour des logos et liens vers les sites institutions @done(18-11-02 10:08)
+  v1.9.0
+    ✔ Afficher un menu latéral droit pour la liste des articles par dates @done(18-10-28 09:24) @project(New.Articles )
+    ✔ Afficher la possibilité de filtrer les articles en fonction des catégories ("Evenements", "Résultats", ...) @done(18-10-28 09:24) @project(New.Articles )
+    ✔ Renommer le fichier accompagnant l'article avec le nom de l'article @file:///c%3A/wamp64/www/inscript/control_class_article.php#213 @done(18-10-27 16:11) @project(New.Articles )
+    ✔ // FIXME Impossible d'enregistrer les n° de chèque dans la base depuis le formulaire @done(18-10-27 10:17) @project(Fixme)
+  v1.8.5
+    ✔ // FIXME correction de la liste des informations pour l'envoi du mail au trésorier @file:///c%3A/wamp64/www/inscript/check_concours.php#593 @done(18-10-26 14:40) @project(Fixme)
+  v1.8.4
+    ✔ // FIXME envoi du mail au trésorier @file:///c%3A/wamp64/www/inscript/check_concours.php#592 @done(18-10-25 17:50) @project(Fixme)
+    ✔ Ajouter les logos des partenaires @done(18-10-25 07:27) @project(New.Accueil )
+  v1.8.3
+    ✔ Créer une page pour afficher le récapitulatif des commandes @done(18-10-21 12:48) @project(New.Accueil )
+  v1.8.2
+    ✔ Créer une page pour la commande de vêtements @high @done(18-10-16 20:41) @project(New.Accueil )
+    ✘ // FIXME Modifier l'affichage de la catégorie (Soit en clair, soit en concatenant le sexe et le type_arc) @file:///c%3A/wamp64/www/inscript/check_concours.php#101 @cancelled(18-10-16 20:50) @project(Fixme)
+    ✘ // FIXME Modifier l'affichage de la catégorie (Soit en clair, soit en concatenant le sexe et le type_arc) @file:///c%3A/wamp64/www/inscript/check_concours.php#688 @cancelled(18-10-16 20:51) @project(Fixme)
+    ✔ // FIXME Centrer verticalement le contenu de cette colonne @file:///c%3A/wamp64/www/inscript/views/ajax_form_concours.php#142 @done(18-10-16 21:31) @project(Fixme)
+    ✔ // FIXME Récupérer l'état de la validation du concours @file:///c%3A/wamp64/www/inscript/views/ajax_form_concours.php#234 @done(18-10-17 07:14) @project(Fixme)
+    ✔ // FIXME Il peut y avoir plus de 4 départs par exemple pour les beursaults @file:///c%3A/wamp64/www/inscript/controls/control_class_concours.php#25 @done(18-10-17 07:51) @project(Fixme)
+    ✔ // FIXME Afficher un modal Success @file:///c%3A/wamp64/www/inscript/views/view_form_commande.html#144 @done(18-10-17 07:15) @project(Fixme)
+    ✔ // FIXME Afficher un model Alert @file:///c%3A/wamp64/www/inscript/views/view_form_commande.html#156 @done(18-10-17 08:26) @project(Fixme)
+    ✔ // FIXME Afficher un model Alert @file:///c%3A/wamp64/www/inscript/views/view_form_commande.html#178 @done(18-10-17 08:26) @project(Fixme)
+    ✔ // FIXME Correction du message affiché si une inscription n'a pas aboutie à cause d'un problème de base de données @file:///c%3A/wamp64/www/inscript/views/view_form_commande.html#226 @done(18-10-17 08:26) @project(Fixme)
+    ✔ // FIXME Correction du message affiché si une inscription n'a pas aboutie à cause d'un problème de base de données @file:///c%3A/wamp64/www/inscript/views/view_form_concours.php#280 @done(18-10-17 08:29) @project(Fixme)
+    ✘ // FIXME Concatener la categorie avec le sexe et le type d'arc @file:///c%3A/wamp64/www/inscript/views/view_form_inscription.php#15 @cancelled(18-10-17 07:14) @project(Fixme)
+    ✔ // FIXME Correction du message affiché si une inscription n'a pas aboutie à cause d'un problème de base de données @file:///c%3A/wamp64/www/inscript/views/view_form_inscription.php#274 @done(18-10-17 08:27) @project(Fixme)
+  v1.8.1
+    ✔ Mise à jour par check_mandat de la base de données lors de l'ajout d'un fichier mandat @done(18-10-11 08:11)
+    ✔ // FIXME Correction encodage des accents dans l'adresse du courrier OpenOffice @done(18-10-11 08:09)
+  v1.8.0
+    ✔ Dans le fiche du concours, pouvoir sélectionner les catégories au tarif Adulte @critical @done(18-10-09 20:56)
+  v1.7.9
+    ✔ Créer une alerte journalière à l'inscripteur sur les départs ayant le mandat du concours mais n'ayant pas de n° de chèque @done(18-10-07 14:08) @project(New.Inscriptions )
+    ✔ Créer une alerte journalière à l'inscripteur sur les départs ayant un n° de chèque mais pas la validation de l'archer @done(18-10-07 14:08) @project(New.Inscriptions )
+    ✘ // FIXME Texte pour paiement sur place ? @file:///c%3A/wamp64/www/inscript/views/view_mail_inscription.html#36 @cancelled(18-10-07 14:12) @project(Fixme)
+  v1.7.8
+    ✔ Création d'un bandeau des nouveautés du site @done(18-10-06 16:07) @project(New.Accueil )
+    ✔ // FIXME Correction du libellé du graphique des résultats de la Salle @file:///c%3A/wamp64/www/inscript/views/view_resultat.html#442 @file:///c%3A/wamp64/www/inscript/views/view_resultat_coach.html#458 @done(18-10-05 07:31)
+  v1.7.7
+    ✔ Séparer les profils "Rédacteur", "Administrateur" et "Entraîneur" @done(18-10-03 07:57)
+    ✔ Création d'une page entraineur où l'accès aux résultats de tous les archers sera possible @done(18-10-03 07:23)
+    ✔ Seul l'archer et l'entraineur peuvent modifier le commentaire d'un résultat @done(18-10-03 07:55)
+    ✔ // FIXME Correction du type de mail envoyé pour la validation des participants @file:///c%3A/wamp64/www/inscript/check_concours.php#904 @done(18-10-03 12:22)
+  v1.7.6
+    ✔ Envoi d'un mail de validation du concours au particiapnt lorsque le concours est payé validé @done(18-09-29 09:16)
+    ✔ Ajout document Réglage d'un arc classique @done(18-09-28 07:45)
+    ✔ Ajout document Renforcement musculaire @done(18-09-28 07:45)
+  v1.7.5
+    ✔ Affichage des moyennes nationales du licencié (Fita, Fédérale, Salle, Beursault, ...) @done(18-09-27 10:34)
+    ✔ Affichage des classements nationals du licencié (Fita, Fédérale, Salle, Beursault, ...) @done(18-09-27 10:34)
+    ✔ Pouvoir mettre des observations personnelles pour un concours @done(18-09-27 10:29)
+    ✔ Ajouter l'icone éditeur de commentaires qui ouvre un modal pour éditer le commentaire @done(18-09-27 10:29)
+    ✔ Créer le formulaire pour éditer le commentaires d'un concours @done(18-09-27 10:29)
+    ✔ Empêcher le passage du concours à "préinscription" tant que le mandat n'existe pas @done(18-09-26 14:53)
+    ✔ Afficher les commentaires personnels sur le tableau de résultats @done(18-09-25 15:00)
+    ✘ Afficher les informations personnelles sur le popup du graphique @cancelled(18-09-25 14:59)
+    ✘ // FIXME L'enregistrement du n° du chèque de trésorerie ne se fait pas, il se fait uniquement si le départ et selectionné @cancelled(18-09-27 13:48)
+  v1.7.4
+    ✔ Ajout du n° de concours dans le formulaire des concours @done(18-09-21 15:56)
+    ✔ Mise à jour des tableau de classement 2019 @done(18-09-18 20:50)
+    ✔ Créer un lien permanent par article @done(18-09-19 07:06)
+    ✔ Afficher l'article via le lien permanent @done(18-09-27 10:33)
+  v1.7.3
+    ✔ Création du formulaire de validation des inscriptions accessible à la personne chargée des inscriptions @high @done(18-09-18 06:51)
+    ✔ Ajouter le n° du chèque dans le formulaire lors du paiement du départ @done(18-09-18 07:20)
+    ✔ Ajouter le n° du chèque dans le tableau des départs dans le mail au trésorier @done(18-09-18 07:36)
+    ✔ Récupérer le courrier OpenOffice de paiment via le menu @done(18-09-17 08:43)
+    ✔ Création d'un document OpenOffice pour joindre au chèque de paiement du concours @high @done(18-09-17 08:16) @project(New.Inscriptions )
+    ✘ Envoyer le document OpenOffice de paiment à l'inscripteur en PJ du mail de préinscription @cancelled(18-09-15 07:53) @project(New.Inscriptions )
+    ✔ Ouvrir la page des résultats d'un concours sur un autre onglet @done(18-09-13 20:25) @project(New.Résultats )
+  v1.7.2
+    ✔ Ajouter une légende au formulaire d'inscription pour la couleur du bouton Trispot @done(18-09-11 07:53) @project(New.Inscriptions )
+    ✔ Mise à jour de la page Tarifs pour 2018-2019 @done(18-09-11 07:22) @project(New.Accueil )
+    ✔ // FIXME Corriger l'affichage proportionnel des photos d'articles (ex : Nouveau licencié) dans "Lire la suite..." @file:///c%3A/wamp64/www/inscript/models/model_class_mur.php#151 @done(18-09-11 07:32) @project(New.Articles )
+    ✔ // FIXME Afficher la date de parution lors de la validation de l'enregistrement de l'article @file:///c%3A/wamp64/www/inscript/controls/control_class_article.php#52 @done(18-09-12 10:17) @project(New.Articles )
+    ✔ // FIXME L'enregistrement d'un concours de décembre affiche un message d'erreur @file:///c%3A/wamp64/www/inscript/views/ajax_saveDeparts.php.php#46 @done(18-09-13 18:28) @project(New.Inscriptions )
+  v1.7.1
+    ✔ // FIXME L'envoi du mail se fait même si la liste des Concours Clos est vide @file:///c%3A/wamp64/www/inscript/check_concours.php#486 @done(18-09-10 07:37) @project(Fixme)
+    ✔ // FIXME Correction de l'adresse postale dans le mail de l'inscripteur @file:///c%3A/wamp64/www/inscript/check_concours.php#872 @done(18-09-10 07:13)
+    ✔ // FIXME La désincription ne supprime pas le concours @file:///c%3A/wamp64/www/inscript/controls/control_class_concours.php#28 @done(18-09-10 06:58) @project(Fixme)
+    ✔ // FIXME Récupérer l'état de la validation du concours @file:///c%3A/wamp64/www/inscript/views/ajax_form_concours.php#216 @done(18-09-09 08:58) @project(Fixme)
+    ✔ // FIXME Correction du dump de base distant @done(18-09-09 08:26) @project(Fixme)
+  v1.7.0
+    ✔ Ajouter les documents utiles aux entrainements @done(18-09-09 07:57) @project(New.Accueil )
+    ✔ Mise à jour des dates de validité des documents de licences @done(18-09-09 07:52) @project(New.Accueil )
+    ✔ Pouvoir effacer un concours choisi tant qu'il n'est pas encore envoyé @done(18-09-09 07:43) @project(New.Inscriptions )
+  v1.6.9
+    ✔ Ajout de la date limite de préinscription dans formulaire d'inscription @done(18-09-08 10:56)
+    ✔ // FIXME Ne plus envoyer de mail au trésorier si la liste des participants est vide @done(18-09-08 10:50) @project(Fixme)
+  v1.6.8
+    ✔ Modification des règles de récupération de la liste des concours HS @done(18-09-06 16:02)
+    ✔ Sauvegarde des informations du concours @done(18-09-06 16:02)
+  v1.6.7
+    ✔ Création d'un formulaire pour remplir les dernières informations d'un concours (Adresse mail du concours, tarifs, adresse postale, ...). @high @done(18-09-05 15:51) @project(New.Inscriptions )
+    ✔ // FIXME Correction Empecher la désinscription sur concours non ouvert @done(18-09-05 15:53)
+  v1.6.6
+    ✔ Possibilité de mettre à jour les résultats par le licencié @done(18-09-04 10:15) @project(New.Résultats )
+    ✔ Ajout d'un lien pour ouvrir dans google maps le lieu géographique du concours @done(18-09-04 08:05) @project(New.Inscriptions )
+    ✔ Ajout bouton pour accéder au mandat dans le listing des concours @done(18-09-04 07:47) @project(New.Inscriptions )
+    ✔ Clic sur 3ème colonne affiche popup inscrits  @file:///c%3A/wamp64/www/inscript/views/view_inscript.php#267 @done(18-09-04 08:07) @project(New.Inscriptions )
+    ✔ // FIXME Ajouter le type de blason dans le mail aux participants  @file:///c%3A/wamp64/www/inscript/views/view_mail_participant.html#20 @done(18-09-04 08:13) @project(Fixme)
+    ✔ // FIXME Ajouter la date du départ dans le mail au trésorier  @file:///c%3A/wamp64/www/inscript/views/view_mail_tresorier.html#22 @done(18-09-04 08:24) @project(Fixme)
+  v1.6.5
+    ✔ // FIXME Bloquer la désincription d'un concours déjà passé  @file:///c%3A/wamp64/www/inscript/controls/control_class_concours.php#25 @done(18-09-03 07:11) @project(Fixme)
+    ✔ // FIXME Correction des dates des concours à envoyer au trésorier @done(18-09-03 06:47) @project(Fixme)
+  v1.6.4
+    ✔ script d'envoi de mail aux participants lorsque les départs sont validés @done(18-09-01 08:55) @project(New.Inscriptions )
+    ✔ Création d'un script pour sauvegarde de la base de données @high @done(18-08-27 16:37) @project(New.Inscriptions )
+  v1.6.3
+    ✔ Affichage d'un message lorsqu'aucune données de résultat n'existe @done(18-08-27 09:16) @project(New.Résultats )
+  v1.6.2
+    ✔ // FIXME Correction du repertoire distant des Classements @file:///c%3A/wamp64/www/inscript/check_resultat.php#40 @done(18-08-27 08:19) @project(Fixme)
+  v1.6.1
+    ✔ Récupération des résultats @done(18-08-26 22:57) @project(New.Résultats )
+  v1.6.0
+    ✔ Affichage des résultats des concours @done(18-08-26 22:01) @project(New.Résultats )
+    ✔ Affichage des courbes des résultats @done(18-08-26 22:01) @project(New.Résultats )
+  v1.5.8
+    ✔ Rangement des documents et photos @done(18-08-23 09:11)
+  v1.5.7
+    ✔ // FIXME Ajouter le choix de la photo  @file:///c%3A/wamp64/www/inscript/views/view_form_article.php#76 @done(18-08-22 23:38) @project(Fixme)
+    ✔ // FIXME Nettoyer le champ Photo lors du reset @file:///c%3A/wamp64/www/inscript/views/view_form_article.php#165 @done(18-08-22 23:38) @project(Fixme)
+    ✔ // FIXME Ajouter le nom du fichier photo lors de la selection dans le tableau @file:///c%3A/wamp64/www/inscript/views/view_form_article.php#194 @done(18-08-22 23:38) @project(Fixme)
+  v1.5.6
+    ✔ Mail au trésorier à envoyer lors de la clôture du concours sur date dépassée  @file:///c%3A/wamp64/www/inscript/views/check_concours.php#516 @done(18-08-21 10:04) @project(New.Inscriptions )
+    ✔ // FIXME Mettre à NULL la photo lorsqu'aucune photo n'est associée à l'article @file:///c%3A/wamp64/www/inscript/models/model_class_article.php#140 @done(18-08-20 11:46) @project(Fixme)
+    ✔ // FIXME Affichage des documents pour les licences pour les non licenciés @done(18-08-21 08:20) @project(Fixme)
+  v1.5.5
+    ✔ // FIXME Correction de l'affichage du formulaire de contact administrateur WEB @done(18-08-20 04:37) @project(Fixme)
+  v1.5.4
+    ✔ Modification de la demande d'adhésion 2018-2019 @done(18-08-19 16:09)
+    ✔ Mise à jour des licences en fonction des ages @done(18-08-19 16:09)
+  v1.5.3
+    ✔ Afficher les informations "règlement intérieur" @high @done(18-08-18 19:06) @project(New.Information du club )
+    ✔ Afficher les informations "Documents" @done(18-08-19 15:42)
+  v1.5.2
+    ✔ // FIXME Correction du choix ligne sur clic colonne "dates" @done(18-08-18 18:02) @project(Fixme)
+    ✔ Afficher les informations "les tarifs" @high @started(18-08-16 21:10) @done(18-08-18 18:12) @lasted(1d21h2m42s) @project(New.Information du club )
+  v1.5.0
+    ✔ Ouverture modal inscription sur clic sur les 2èmes colonnes  @file:///c%3A/wamp64/www/inscript/views/view_inscript.php#180 @done(18-08-18 09:29) @project(New.Inscriptions )
+    ✔ Ajout fichier ICS dans mail aux licenciés  @file:///c%3A/wamp64/www/inscript/views/view_mail_participant.html#6  @file:///c%3A/wamp64/www/inscript/check_concours.php#381 @done(18-08-17 23:03) @project(New.Inscriptions )
+    ✔ Ajouter le montant de l'inscription au concours sur le mail à l'inscripteur  @file:///c%3A/wamp64/www/inscript/views/view_mail_inscripteur.html#32 @done(18-08-17 10:03) @project(New.Inscriptions )
+    ✔ // FIXME Ajouter mail et tél de l'inscripteur dans le mail d'inscription envoyé aux licenciés  @file:///c%3A/wamp64/www/inscript/views/view_mail_inscription.html#34 @file:///c%3A/wamp64/www/inscript/views/view_mail_participant.html#28 @done(18-08-17 10:03) @project(Fixme)
+    ✔ // FIXME Ajout tél et mail du président du club dans mail demande d'inscription  @file:///c%3A/wamp64/www/inscript/views/view_mail_inscription.html#13 @done(18-08-16 20:31)
+    ✔ // FIXME Ajouter blason ou trispot dans le mail d'inscription envoyé au club et aux licenciés   @file:///c%3A/wamp64/www/inscript/views/view_mail_inscription.html#26 @done(18-08-16 18:04) @project(Fixme)
+  v1.4.9
+    ✔ Modification de la bannière pour prendre en compte les différentes largeur d'écran @done(18-08-15 09:31) @project(New.Accueil )
+  v1.4.8
+    ✔ Enregistrement du type de blason dans la base @done(18-08-14 18:30) @project(New.Inscriptions )
+    ✔ // FIXME Améliorer la visibilité du choix du blason (Rouge = Trispot non choisi / Vert = Trispot choisi) @file:///c%3A/wamp64/www/inscript/views/ajax_departs.php#142 @done(18-08-14 18:33) @project(Fixme)
+    ✔ // FIXME Correction du message d'inscription réussie @file:///c%3A/wamp64/www/inscript/views/ajax_saveConcours.php#34 @done(18-08-14 19:44)
+    ✔ // FIXME Correction du message d'inscription Annulée @file:///c%3A/wamp64/www/inscript/views/ajax_saveConcours.php#44 @done(18-08-14 19:46)
+    ✔ // FIXME Correction du message d'inscription Annulée pour concours clos @file:///c%3A/wamp64/www/inscript/views/ajax_saveConcours.php#58 @done(18-08-14 19:51)
+  v1.4.7
+    ✔ Ajouter la visibilité des départs dans le popup en plus du nom pour connaitre les départs choisi par d'autres licenciés @high @done(18-08-12 13:35) @project(New.Inscriptions )
+    ✔ Permettre à l'utilisateur de modifier sur son profil le nombre de colonnes d'articles de la page d'accueil @done(18-08-11 11:46) @project(New.Accueil )
+    ✔ Ajouter choix blason / trispot @critical @done(18-08-14 09:17) @project(New.Inscriptions )
+    ✔ // FIXME n'activer le bouton Valider que si le concours est ouvert @file:///c%3A/wamp64/www/inscript/views/view_inscript.php#152 @done(18-08-14 09:46) @project(Fixme)
+  v1.4.6
+    ✔ // FIXME Affichage sur Mobile sur une colonne @file:///c%3A/wamp64/www/inscript/models/model_class_mur.php#52 @done(18-08-11 10:03) @project(Fixme)
+  v1.4.5
+    ✔ Afficher les informations "les horaires" @done(18-08-09 16:01) @project(New.Information du club )
+    ✔ // FIXME L'enregistrement de l'article ne se fait pas @file:///c%3A/wamp64/www/inscript/models/model_class_article.php#259 @done(18-08-09 20:07) @project(Fixme)
+  v1.4.4
+    ✔ Afficher les informations "qui contacter" @done(18-08-08 22:57) @project(New.Information du club )
+    ✔ // FIXME Changer l'organisation du menu @done(18-08-08 22:58) @project(Fixme)
+    ✔ N'afficher le bouton "Lire la suite..." que lorsque le contenu dépasse XX caractères @done(18-08-08 23:46) @project(New.Articles )
+    ✔ Afficher le contenu d'un article dans une nouvelle fenetre (Modal) @done(18-08-08 23:47) @project(New.Articles )
+  v1.4.3
+    ✔ Afficher l'article en entier après le clic sur lire la suite @done(18-08-08 15:59) @project(New.Accueil )
+    ✔ Augmenter à 140 le nombre de caractères affichés par article sur la page d'accueil @done(18-08-08 12:01) @project(New.Accueil )
+    ✔ Afficher les articles dans l'ordre du plus récent au plus ancien @done(18-08-08 11:58) @project(New.Accueil )
+    ✔ // FIXME Corriger l'affichage des articles publics et privés @done(18-07-29 10:58) @project(Fixme)
+  v1.4.2
+    ✔ Créer une notification des versions @done(18-07-29 09:06) @project(New.Profil )
+  v1.4.1
+    ✔ Créer un profil administrateur du site @done(18-07-28 09:42) @project(New.Accueil )
+    ✔ Créer un formulaire pour rédiger et sauvegarder un article par un administrateur @started(18-07-25 17:02) @done(18-07-28 09:42) @lasted(2d16h40m41s) @project(New.Accueil )
+    ✔ Pouvoir supprimer un article en ayant les droits administrateur @done(18-07-28 09:42) @project(New.Accueil )
+    ✔ Affichage des articles sur X colonnes parametrables sur la page d'accueil @done(18-07-28 09:42) @project(New.Accueil )
+    ✔ Activé la(es) checkbox des départs déjà choisis lors de la sélection d'un concours déjà préinscrit @done(18-07-28 09:43) @project(New.Inscriptions )
+    ✔ // FIXME Ajout d'un saut de ligne avant les départ pour une meilleure lisibilité @done(18-07-28 09:49) @project(Fixme)
+  v1.4.0
+    ✔ Filtrage des articles de la page d'accueil (Affichage des articles public pour une personne non connue) @done(18-07-25 10:44) @project(New.Accueil )
+    ✔ Gérer les articles privés (uniquement visible par les licenciés) @done(18-07-25 10:43) @project(New.Accueil )
+    ✔ Mettre en base de données le contenu des articles @done(18-07-25 10:41) @project(New.Accueil )
+  v1.3.1
+    ✘ // FIXME Griser le bouton si le concours choisi est à l'état "Clos"  @file:///c%3A/wamp64/www/inscript/js/jvs_inscript.js#134 @cancelled(18-07-24 14:32) @project(Fixme)
+    ✔ // FIXME Désactiver le bouton si le concours est clos  @file:///c%3A/wamp64/www/inscript/views/ajax_departs.php#101 @done(18-07-24 14:32) @project(Fixme)
+    ✔ // FIXME Faire disparaitre le bouton si le concours choisi est à l'état "Clos"  @file:///c%3A/wamp64/www/inscript/js/jvs_inscript.js#96 @done(18-07-23 12:28) @project(Fixme)
+  v1.3.0
+    ✔ Création d'un script pour envois des mail d'inscriptions tous les jours à heure fixe @done(18-07-22 11:42)
+    ✔ Création du mail d'envoi des inscriptions pour informer l'inscripteur
+    ✔ Création du mail d'inscription aux concours et envoi au club organisateur
+    ✔ Création du mail pour informer les participants de l'inscription
+    ✔ Création du mail pour avertir l'administrateur WEB que l'adresse mail, l'adresse postale d'un concours arrivant à X jours avant la clôture n'est pas renseignées
+  v1.2.5
+    ✔ // FIXME Le contenu du champ ne s'affiche pas lorsque l'on clique sur l'oeil @file:///c%3A/wamp64/www/inscript/views/view_password.php#18 @done(18-07-22 10:47) @project(Fixme)
+    ✔ // FIXME Le contenu du champ ne s'affiche pas lorsque l'on clique sur l'oeil @file:///c%3A/wamp64/www/inscript/views/view_password.php#26 @done(18-07-22 10:47) @project(Fixme)
+    ✔ // FIXME Griser le bouton de désincription lorsqu'il n'y pas de concours dans le tableau @file:///c%3A/wamp64/www/inscript/views/view_desinscript.php#14 @done(18-07-22 09:55) @project(Fixme)
+    ✔ // FIXME Correction de l'état d'un concours lors de l'inscription" 
+    ✔ // FIXME Correction du tri des concours chronologiquement" 
+    ✔ // FIXME Le double clic sur mobile zoom au lieu de sélectionner la ligne, modifié par un simple clic @file:///c%3A/wamp64/www/inscript/views/view_inscript.php#173 @done(18-07-21 12:35)
+    ✔ // FIXME Corriger le mot "changment" @file:///c%3A/wamp64/www/inscript/views/view_user.php#27 @done(18-07-21 09:06) @project(Fixme)
+  v1.2.4
+    ✔ Meilleure gestion d'envoi des informations de la nouvelle version vers les personnes ayant activées la notification @done(18-07-20 19:08)
+  v1.2.3
+    ✔ Cliquer sur la ligne du tableau inscription, selectionne l'ID @done(18-07-20 08:12) @project(New.Inscriptions )
+    ✔ Interdire l'inscription à un concours "clos" @done(18-07-20 08:13) @project(New.Inscriptions )
+  v1.2.2
+    ✔ //FIXME Vérifier que la requête s'est bien déroulé @file:///c:/wamp64/www/inscript/controls/control_class_user.php#69 @done(18-07-13 14:44) @project(Fixme)
+  v1.2.1
+    ✔ Créer un script pour avertir l'administrateur WEB que l'adresse mail, l'adresse postale d'un concours arrivant 15 jours avant la clôture n'est pas renseignées @done(18-07-13 07:43) @project(New.Inscriptions )
+    ✔ Ajouter l'horodatage aux fichiers de logs @done(18-07-13 06:05) @project(New.Inscriptions )
+  v1.2.0
+    ✔ Script d'envoi des informations de la nouvelle version vers les personnes ayant activées la notification @done(18-07-12 18:39)
+    ✔ Ajouter un SHA pour valider l'envoi du script check_version @done(18-07-12 18:39)
+    ✔ Ajouter un SHA pour valider l'envoi du script check_concours @done(18-07-11 18:39) @project(New.Inscriptions )
+    ✔ Mettre les lignes du tableau en couleur en fonction de l'état du concours (Ouvert (vert), Préinscription (jaune), Validé (orange), Clos(rouge, blanc)) @done(18-07-11 15:26) @project(New.Inscriptions )
+    ✔ Création du mail pour informer les participants de l'inscription @done(18-07-11 12:29) @project(New.Inscriptions )
+    ✔ Ajout de l'état du concours dans la base (Ouvert, Préinscription, Validé, Clos) @done(18-07-10 16:44) @project(New.Inscriptions )
+    ✔ Ajout de la date d'inscription dans la base @done(18-07-10 16:44) @project(New.Inscriptions )
+    ✔ Création du mail d'envoi des inscriptions pour informer l'inscripteur @done(18-07-10 16:44) @project(New.Inscriptions )
+    ✔ Création du mail d'inscription aux concours @done(18-07-10 09:00) @project(New.Inscriptions )
+    ✔ Ajouter un export de l'environnement du client pour analyse des bugs au formulaire de contact du développeur @done(18-07-10 17:02) @project(New.Accueil )
+  v1.1.7
+    ✔ //FIXME deplacement parametres de la base de données dans la configuration locale
+  v1.1.6
+    ✔ //FIXME ajout modal pour echec @file:///c:/wamp64/www/inscript/controls/control_class_contact.php#88 @done(18-07-06 16:10) @project(Fixme)
+    ✔ //FIXME ajout modal pour succes @file:///c:/wamp64/www/inscript/controls/control_class_contact.php#92 @done(18-07-06 16:10) @project(Fixme)
+  v1.1.5
+    ✔ Ajouter un bouton pour voir tous les concours même ceux déjà passés @done(18-07-06 09:07) @project(New.Inscriptions )
+  v1.1.4
+    ✔ Formulaire pour contacter le développeur @done(18-07-03 18:36) @project(New.Accueil )
+  v1.1.3
+    ✔ Ajout de couleur pour suivre l'état d'inscription dans le tableau des concours (préinscrit, inscrit, inscription validée) @done(18-06-30 06:47) @project(New.Inscriptions )    
+    ✔ Désactivation de la touche entrée pour valider le formulaire d'inscription @done(18-06-28 11:30) @project(New.Inscriptions )
+  v1.1.2
+    ✔ //FIXME les checkbox restent checked malgré ce code @file:///home/parents/Devs/inscript/views/view_desinscript.php#41 @done(18-06-28 07:08) @project(Fixme)
+    ✔ //FIXME La désinscription se fait à l'inverse de se qui doit être fait @file:///c:/wamp64/www/inscript/controls/control_class_concours.php#74 @done(18-06-28 07:09) @project(Fixme)
+  v1.1.1
+    ✔ Oubli du fichier view_password.php @done(18-06-28 07:12)
+  v1.1.0
+    ✔ Pouvoir changer son mot de passe @done(18-06-27 08:03) @project(New.Profil )
+  v1.0.9
+    ✔ Suppression du fichier de configuration local des sources @done(18-06-26 16:04)
+  v1.0.8
+    ✔ Ajout de la date de préinscription dans la base @done(18-06-26 13:34) @project(New.Inscriptions )
+    ✔ Créer une page avec les informations du licencié logué @done(18-06-26 10:47) @project(New.Profil )
+    ✔ Pouvoir ajouter son adresse mail pour contact par mail @done(18-06-26 10:47) @project(New.Profil )
+    ✔ Pouvoir ajouter son n° de téléphone pour contact par SMS @done(18-06-26 10:47) @project(New.Profil )
+    ✔ Modal au survol du départ pour afficher les inscrits sur ce départ @done(18-06-21 08:28) @project(New.Inscriptions )
+    ✔ Affichage dans la page d'accueil des articles du club @done(18-06-23 09:25) @project(New.Accueil )
+    ✔ Affichage de la page d'accueil des non loggués @done(18-06-23 09:25) @project(New.Accueil )
+    ✔ //FIXME l'affectation de la date du jour ne fonctionne pas @file:///c:/wamp64/www/inscript/js/function.js#54 @done(18-06-23 09:24) @project(Fixme)
+    ✘ //FIXME pas d'erreur catchée @file:///c:/wamp64/www/inscript/modeles/modClassDb.php#164 @cancelled(18-06-23 09:22) @project(Fixme)
+    ✔ Création bouton Connexion/Déconnexion dans le menu en haut à droite @done(18-06-07 16:12) @project(Todos.New.Accueil )
+    ✔ Affichage en bas de page du n° de version et du développeur @done(18-06-07 16:12) @project(Todos.New.Accueil )
+    ✔ Modal au survol de la case nombre d'inscrits qui affiche les noms des inscrits @done(18-06-07 16:11) @project(Todos.New.Inscriptions )
+    ✔ //FIXME Afficher "Vous avez déjà sélectionné le départ du dimanche après-midi 03/06/2018 !" @file:///c:/wamp64/www/inscript/modeles/modInscriptions.php#81 @done(18-06-07 07:35) @project(Todos.Fixme)
+    ✔ //FIXME Afficher en Modal le message @file:///c:/wamp64/www/inscript/modeles/modInscriptions.php#80 @done(18-06-07 07:33) @project(Todos.Fixme)
+    ✔ Afficher le message "Créneau déjà selectionné par le licencié" en modal @done(18-06-07 07:33) @project(Todos.New.Inscriptions )
+    ✔ Ajouter le nombre d'inscrits à un concours dans le tableau des inscriptions @done(18-06-05 19:05) @project(Todos.New.Inscriptions )
+    ✔ Affichage des informations (archer, concours, départ) sur un tableau pour connaitre les archers présents aux concours @done(18-06-02 09:27) @project(Todos.New.Inscriptions )
+    ✔ //FIXME mettre au centre les icones et à gauche le copyright @file:///c:/wamp64/www/inscript/vues/gabarits/footer.html#12 @done(18-05-29 07:05) @project(Todos.Fixme )
+    ✔ //FIXME à la validation de l'inscription ne pas basculer sur la page Accueil, rester sur inscriptions @file:///c:/wamp64/www/inscript/vues/gabarits/navbar.html#1 @done(18-05-28 16:49) @project(Todos.Fixme )
+    ✔ //FIXME empêcher le choix d'un ID qui n'est pas affiché dans le tableau @file:///c:/wamp64/www/inscript/js/function.js#23 @done(18-05-28 12:31) @project(Todos.Fixme )
+    ✔ //FIXME le filtrage ne se fait plus @file:///c:/wamp64/www/inscript/vues/gabarits/formInscription.html#47 @done(18-05-28 06:52) @project(Todos.Fixme )
+    ✔ Sauvegarde dans la base de données du contenu du formulaire @started(18-05-14 18:12) @done(18-05-27 10:12) @lasted(1w5d16h14s) @project(Todos.New.Inscriptions )
+    ✔ //FIXME enregistre un datetime au lieu d'une string dans la base de données @file:///c:/wamp64/www/inscript/modeles/modInscriptions.php#68 @started(18-05-17 17:51) @done(18-05-27 10:10) @lasted(1w2d16h19m30s) @project(Todos.Fixme )
+    ✔ //FIXME alignement du message d'erreur @file:///c:/wamp64/www/inscript/vues/gabarits/formLogin.html#9 @done(18-05-27 09:35) @project(Todos.Fixme )
+    ✔ //FIXME gérer les départ via des coches, indiquer d'abord le nb de départ puis une fois ne nb de coche égale au nb de départ, griser les coches jusqu'à un décochement. @file:///c:/wamp64/www/inscript/js/function.js#119 @done(18-05-26 09:48) @project(Todos.Fixme )
+    ✔ //FIXME si le concours est sur une journée n'afficher que les départs du jour Samedi ou Dimanche @file:///c:/wamp64/www/inscript/vues/gabarits/formInscription.html#38 @done(18-05-26 09:44) @project(Todos.Fixme )
+    ✔ //FIXME Correction des paramètres des config locale @file:///c:/wamp64/www/inscript/constantes.php#4 @done(18-05-14 12:06)
+    ✔ Affichage des informations du licencié sur le formulaire @done(18-05-14 09:32)
+  v1.0.0
+    ✔ Création bouton Déconnexion dans le menu en haut à droite @done(18-05-14 09:23)
+    ✔ //FIXME Correction d'encodage sur les caractères de la liste @file:///c:/wamp64/www/inscript/modeles/modInscriptions.php#48 @done(18-05-10 19:53)
+    ✔ //FIXME Corriger l'effacement de la date lors du changement de focus @file:///c:/wamp64/www/inscript/js/function.js#13 @started(18-05-05 10:07) @done(18-05-06 11:02) @lasted(1 day 55 minutes 43 seconds)
+    ✔ //FIXME Corrige le bug de header @done(18-05-16 00:00) @file:///c:/wamp64/www/inscript/vues/vueLogin.php#1
+    ✔ //FIXME Corrige le bug de header @done(18-05-16 00:00) @file:///c:/wamp64/www/inscript/vues/vuePrincipale.php#1
+    ✔ Gestion des créneaux pour éviter les doublons @done(18-05-16 00:00)
+    ✔ Affichage des créneaux @done(18-05-16 00:00)
+    ✔ Affichage du choix du nombre de départ @done(18-05-15 00:00)
+    ✔ Affichage des informations du concours sur le formulaire @done(18-05-14 00:00) 
+    ✔ Accès par login/Pass au site @done(18-05-13 00:00)
+
+Documentation :
+New: 
+  ☐ Ctrl+Enter pour ajouter un nouveau todo
+Done:
+  ✔ Alt+D pour marquer un todo à fait
+  ☐ Alt+D à nouveau pour annuler l'action
+Cancel:
+  ✘ ALT+C pour marquer le todo à annuler
+  ✘ ALT+C à nouveau pour annuler l'action
+Tagging:
+  ☐ On peut ajouter un tag en utilisant le signe @tag
+  ☐ Il existe des tag spécials @critical @high @low @today 
+Time:
+✔ un todo terminé peut afficher l'heure @done(18-05-05 09:34)
+☐ Alt+S pour marquer un todo à démarrer @started(18-05-05 09:34)
+  ✔ Maintenant il peut afficher le temps passé @started(18-05-05 09:35) @done(18-05-05 09:35) @lasted(21 seconds)
+Style :
+Bold:
+  ☐ Utiliser les Astérisques : *bold*
+Italic:
+  ☐ Utiliser mes underscores : _italic_
+Strike:
+  ☐ Utiliser les tildes : ~strike~
+
+Code :
+☐ On peut emporter du code 'code' 
+☐  Even '''
+  Multi-line
+  code blocks
+  are supported
+  '''
+
+Archive:
+✔ Les todos terminés sont bougés ici en utilisant Ctrl+Shift+A
+
+FIXME (1):
+  Création du fichier FIXME : Ctrl + Shift + P, "Todo: open Embedded", copier ligne depuis le fichier créé
+  ☐ //FIXME Corriger l'effacement de la date lors du changement de focus

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div id='contenu' style='padding: 20px 20px 20px 20px;'>
+            Bonjour,<br>
+            Un ou plusieurs concours ont été clôturés aujourd'hui.
+            Ce mail vous est envoyé automatiquement pour vous informer des montants engagés par le club pour ce(s) concours.
+        </div>
+        <br>
+        <div id='listing' style='padding: 0px 20px 0px 20px;'>
+            <table id='tableauInscrit' style='padding: 20px 10px 0px 10px;'>
+                <caption style='text-align:center; font-size: x-large;' >Coûts des départs par participants</caption>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>n° Licence</th>
+                    <th>Catégorie</th>
+                    <th>Discipline</th>
+                    <th>Lieu du concours</th>
+                    <th>Date du Concours</th>
+                    <th>Départ</th>
+                    <th>Coût du départ</th>
+                    <th>n° chèque</th>
+                </tr>
+                <tr>
+                    %%arrTableauCout%%
+                </tr>
+            </table>
+        </div>
+        <div id='question' style='padding: 30px 20px 10px 20px;'>
+            Le montant total des inscriptions à ce(s) concours est de <b>%%intMontant%% €</b>.<br>
+            Ce montant devra être confirmé par la personne chargée des inscriptions.<br>
+        </div>
+        <div id='remerciements' style='padding: 10px 20px;'>
+            Merci d'avance pour votre travail.<br>
+            Cordialement<br>
+        </div>
+        <div id='signature' style='text-align: right; padding: 30px 20px;'>
+            Le robot d'inscription.
+        </div>
+    </body>
+</html>
