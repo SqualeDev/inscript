@@ -1,4 +1,4 @@
-config_local.php
+# config_local.php
 .vscode/settings.json
 version
 logs/*.log
