@@ -14,13 +14,14 @@
         // Config finale
         // require_once $_SERVER['DOCUMENT_ROOT'] . '/licencies/config_local.php';
         require_once $_SERVER['DOCUMENT_ROOT'] . '/licencies/constantes.php';
+        require $_SERVER['DOCUMENT_ROOT'] . '/licencies/check_resultat_array.php';
     } else {
         // Config Debug
         // require_once $_SERVER['DOCUMENT_ROOT'] . '/config_local.php';
         require_once $_SERVER['DOCUMENT_ROOT'] . '/constantes.php';
+        require $_SERVER['DOCUMENT_ROOT'] . '/check_resultat_array.php';
     }
     // require $_SERVER['DOCUMENT_ROOT'] . '/licencies/constantes.php';
-    require $_SERVER['DOCUMENT_ROOT'] . '/licencies/check_resultat_array.php';
     // echo "Timezone actuel : " . date_default_timezone_get();
 
     function recupererClassements($arrAnnee, $arrLicencie) {
@@ -218,17 +219,17 @@
             echo "Chaine à parser : " . $query_TypeConcours->item(0)->nodeValue . "<br/>";
             $arrRslt = explode('-',$query_TypeConcours->item(0)->nodeValue);
 
-            preg_match( '%Classement (.*) - (.*) ([0-9]{4})( \((.*)\))? - (\d*) archers%', $query_TypeConcours->item(0)->nodeValue, $arrParams );
+            preg_match( '%Classement (?<typeConcours>.*) - (?<categorie>.*) (?<annee>[0-9]{4})( \((?<distance>.*)\))? - (?<nbArchers>\d*) archers%', $query_TypeConcours->item(0)->nodeValue, $arrParams );
             echo "<pre>".var_dump($arrParams)."</pre>";
-            $strTypeConcours = $arrParams[1];
-            $strCategorie = $arrParams[2];
-            $strAnnee = $arrParams[3];
-            $strDistance = $arrParams[5];
-            $strNbArchers = $arrParams[6];
-
-            if ($strDistance == '') {
+            $strTypeConcours = $arrParams["typeConcours"];
+            $strCategorie = $arrParams["categorie"];
+            $strAnnee = $arrParams["annee"];
+            if (array_key_exists("distance", $arrParams)) {
+                $strDistance = $arrParams["distance"];
+            } else {
                 $strDistance = trouveDistBlason($strTypeConcours, $strCategorie);
             }
+            $strNbArchers = $arrParams["nbArchers"];
 
             // echo "n° classement : ". $_numClassement . '<br/>';
             // echo "URL du classement : " . $strHTML . '<br/>';
@@ -615,6 +616,9 @@
 
             if (isset($_GET['recupererClassements'])) {
                 switch ($_GET['recupererClassements']) {
+                    case '2020':
+                        recupererClassements($arr2020, $arrLicencie);
+                        break;
                     case '2019':
                         recupererClassements($arr2019, $arrLicencie);
                         break;
